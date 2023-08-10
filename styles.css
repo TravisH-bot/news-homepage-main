@@ -66,6 +66,10 @@ li a {
   color: var(--dark-grayish-blue);
 }
 
+li a:hover {
+  color: var(--soft-red);
+}
+
 li:not(:last-child) {
   margin-right: 3rem;
 }
@@ -75,7 +79,7 @@ li:not(:last-child) {
 /* =========================== Mid Article =========================== */
 .mid {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   height: 40rem;
   margin-bottom: 6rem;
 }
@@ -95,20 +99,20 @@ li:not(:last-child) {
 
 .title {
   color: var(--very-dark-blue);
-  width: 30rem;
+  width: 32rem;
   height: 16rem;
-  font-size: 4rem;
+  font-size: 4.1rem;
   padding: 3rem 4rem 0 0;
-  line-height: 4.1rem;
+  line-height: 4.3rem;
 }
 
 .preview {
   color: var(--dark-grayish-blue);
-  width: 30rem;
+  width: 28rem;
   height: 16rem;
   font-size: 1.2rem;
   line-height: 2rem;
-  padding: 3rem 2rem 0 0;
+  padding: 3rem 1rem 0 0;
 }
 
 .btn {
@@ -126,8 +130,8 @@ li:not(:last-child) {
 }
 
 .btn:hover {
-  color: var(--dark-grayish-blue);
-  background-color: var(--soft-orange);
+  color: var(--off-white);
+  background-color: var(--very-dark-blue);
   transform: translateY(-0.1rem);
   box-shadow: 0 0.2rem 0 0 var(--soft-red);
   border-bottom: 0.2rem solid var(--soft-red);
@@ -165,6 +169,12 @@ li:not(:last-child) {
   font-size: 1.6rem;
   padding-bottom: 1rem;
 }
+
+.side-articles h3:hover {
+  color: var(--soft-orange);
+  cursor: pointer;
+}
+
 .side-articles p {
   color: var(--grayish-blue);
   font-size: 1.2rem;
@@ -176,13 +186,45 @@ li:not(:last-child) {
 
 .trending-articles {
   display: flex;
+  justify-content: space-between;
 }
 
 .trends {
   display: flex;
+  width: 30rem;
+}
+
+.trends:not(:first-child) {
+  padding-left: 2rem;
 }
 
 .thumbnail img {
-  width: 9rem;
-  height: 12rem;
+  width: 8rem;
+  height: 10rem;
+}
+
+.trend-info {
+  padding-left: 1.5rem;
+}
+
+.trend-info h2 {
+  font-size: 2.5rem;
+  color: var(--grayish-blue);
+  margin-bottom: 0.8rem;
+}
+
+.trend-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+}
+
+.trend-info h3:hover {
+  color: var(--soft-red);
+}
+
+.trend-info p {
+  font-size: 1.4rem;
+  color: var(--dark-grayish-blue);
+  line-height: 2rem;
 }
