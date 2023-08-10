@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+}
+
+:root {
+  /* Font- 400, 700, 800 */
+  --font: "Inter", sans-serif;
+
+  /* Primary Colors */
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+
+  /* Neutral Colors */
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+body {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* =========================== Main Container =========================== */
+
+.main-container {
+  width: 90rem;
+  padding: 3rem 0 5rem 0;
+}
+
+/* =========================== Nav Header =========================== */
+
+header {
+  min-height: 9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 4rem;
+  width: 6rem;
+}
+
+header ul {
+  display: flex;
+  text-align: right;
+}
+
+ul li {
+  font-size: 1.1rem;
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+}
+
+li:not(:last-child) {
+  margin-right: 3rem;
+}
+
+/* =========================== Mid Container =========================== */
+
+/* =========================== Mid Article =========================== */
+.mid {
+  display: flex;
+  gap: 2.5rem;
+  height: 40rem;
+  margin-bottom: 6rem;
+}
+
+.main-article {
+  width: 60rem;
+}
+
+.large-img {
+  width: 60rem;
+  height: 22rem;
+}
+
+.main-info {
+  display: flex;
+}
+
+.title {
+  color: var(--very-dark-blue);
+  width: 30rem;
+  height: 16rem;
+  font-size: 4rem;
+  padding: 3rem 4rem 0 0;
+  line-height: 4.1rem;
+}
+
+.preview {
+  color: var(--dark-grayish-blue);
+  width: 30rem;
+  height: 16rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding: 3rem 2rem 0 0;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 2rem;
+  border: none;
+  color: var(--off-white);
+  background-color: var(--soft-red);
+  width: 15rem;
+  height: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 1.1rem;
+  transition: 0.1s;
+}
+
+.btn:hover {
+  color: var(--dark-grayish-blue);
+  background-color: var(--soft-orange);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.2rem 0 0 var(--soft-red);
+  border-bottom: 0.2rem solid var(--soft-red);
+}
+
+.btn:active {
+  transform: translateY(0.1rem);
+  box-shadow: none;
+  border-top: 0.2rem solid var(--soft-red);
+  border-bottom: none;
+}
+
+/* =========================== Side Article =========================== */
+
+.side-articles {
+  width: 30rem;
+  height: 40rem;
+  background-color: var(--very-dark-blue);
+  padding: 2rem;
+}
+
+.side-art:not(:last-child) {
+  border-bottom: 0.1rem solid var(--grayish-blue);
+  margin-bottom: 2rem;
+}
+
+.side-articles h2 {
+  color: var(--soft-orange);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.side-articles h3 {
+  color: var(--off-white);
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+}
+.side-articles p {
+  color: var(--grayish-blue);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 2rem;
+}
+
+/* =========================== Trending Articles =========================== */
+
+.trending-articles {
+  display: flex;
+}
+
+.trends {
+  display: flex;
+}
+
+.thumbnail img {
+  width: 9rem;
+  height: 12rem;
+}
