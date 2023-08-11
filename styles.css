@@ -46,6 +46,17 @@ header {
   align-items: center;
 }
 
+.nav {
+  transition: top 0.3s;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
 .logo {
   height: 4rem;
   width: 6rem;
@@ -64,6 +75,7 @@ ul li {
 li a {
   text-decoration: none;
   color: var(--dark-grayish-blue);
+  font-size: 1.25rem;
 }
 
 li a:hover {
@@ -72,6 +84,20 @@ li a:hover {
 
 li:not(:last-child) {
   margin-right: 3rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--dark-grayish-blue);
 }
 
 /* =========================== Mid Container =========================== */
@@ -88,9 +114,13 @@ li:not(:last-child) {
   width: 60rem;
 }
 
-.large-img {
+.desktop-img {
   width: 60rem;
   height: 22rem;
+}
+
+.graphic-mobile {
+  display: none;
 }
 
 .main-info {
@@ -224,7 +254,194 @@ li:not(:last-child) {
 }
 
 .trend-info p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--dark-grayish-blue);
   line-height: 2rem;
+}
+
+/* =========================== Media Queries =========================== */
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 23.438rem;
+  }
+
+  /* =========================== Main Container =========================== */
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    width: 23.438rem;
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  /* =========================== Nav Header =========================== */
+  header {
+    min-height: 6rem;
+    position: fixed;
+    background-color: var(--off-white);
+    width: 21.438rem;
+  }
+
+  .logo {
+    height: 2.5rem;
+    width: 4.5rem;
+  }
+
+  li:not(:last-child) {
+    margin-right: 0rem;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: 110%;
+    top: 0rem;
+    flex-direction: column;
+    background-color: var(--off-white);
+    width: 100%;
+    height: 100svh;
+    padding-left: 1rem;
+    padding-top: 9rem;
+    text-align: left;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px var(--very-dark-blue);
+    width: 15rem;
+    color: var(--very-dark-blue);
+  }
+
+  .nav-menu.active {
+    left: 36%;
+    z-index: 2;
+  }
+
+  .nav-item-1,
+  .nav-item-2,
+  .nav-item-3,
+  .nav-item-4,
+  .nav-item-5 {
+    margin: 1rem 0 1rem 0;
+  }
+
+  .hamburger {
+    position: fixed;
+    display: block;
+    cursor: pointer;
+    z-index: 3;
+    transform: translateX(-1.5rem);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  /* =========================== Mid Container =========================== */
+  /* =========================== Mid Article =========================== */
+  .mid {
+    flex-direction: column;
+    margin: 6rem 0 48rem 0;
+  }
+
+  .main-article {
+    width: 21.438rem;
+  }
+
+  .graphic {
+    display: none;
+  }
+
+  .graphic-mobile {
+    display: contents;
+  }
+
+  .mobile-img {
+    width: 21.438rem;
+    height: 21.438rem;
+    margin-bottom: 1rem;
+  }
+
+  .main-info {
+    flex-direction: column;
+  }
+
+  .title {
+    width: 21.438rem;
+    height: 9rem;
+    font-size: 2.5rem;
+    padding: 0;
+    line-height: 2.8rem;
+  }
+
+  .preview {
+    width: 21.438rem;
+    height: 14rem;
+    padding: 0;
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 10.719rem;
+    height: 3rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.3rem;
+    margin-top: 1rem;
+  }
+
+  /* =========================== Side Article =========================== */
+  .side-articles {
+    width: 21.438rem;
+    padding: 1rem;
+  }
+
+  .side-articles h2 {
+    font-size: 2rem;
+  }
+
+  .side-articles h3 {
+    font-size: 1.3rem;
+  }
+
+  .side-articles P {
+    font-size: 1rem;
+  }
+
+  /* =========================== Trending Articles =========================== */
+  .trending-articles {
+    flex-direction: column;
+  }
+
+  .trends {
+    width: 21.438rem;
+    margin-bottom: 2rem;
+  }
+
+  .trends:not(:first-child) {
+    padding-left: 0;
+  }
+
+  .thumbnail img {
+    width: 6.5rem;
+    height: 9.5rem;
+  }
+
+  .trend-info h2 {
+    font-size: 2.2rem;
+  }
+
+  .trend-info h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+
+  .trend-info p {
+    font-size: 0.91rem;
+  }
+
+  .attribution {
+    font-size: 0.8rem;
+  }
 }

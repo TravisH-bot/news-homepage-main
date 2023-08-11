@@ -16,22 +16,36 @@
 
     <header class="nav">
       <img class="logo" src="./assets/images/logo.svg" alt="logo">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">New</a></li>
-        <li><a href="#">Popular</a></li>
-        <li><a href="#">Trending</a></li>
-        <li><a href="#">Categories</a></li>
-      </ul>
+      <nav class="navbar">
+        <ul class="nav-menu">
+
+          <li class="nav-item-1"><a href="#">Home</a></li>
+          <li class="nav-item-2"><a href="#new">New</a></li>
+          <li class="nav-item-3"><a href="#popular">Popular</a></li>
+          <li class="nav-item-4"><a href="#trending">Trending</a></li>
+          <li class="nav-item-5"><a href="#categories">Categories</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
     </header>
 
     <section class="mid">
 
       <div class="main-article">
-        <div>
-          <img class="large-img" src="./assets/images/image-web-3-desktop.jpg" alt="wooden puzzle pieces">
+
+        <div class="graphic">
+          <img class="desktop-img" src="./assets/images/image-web-3-desktop.jpg" alt="wooden puzzle pieces">
         </div>
-        <div class="main-info">
+
+        <div class="graphic-mobile">
+          <img class="mobile-img" src="./assets/images/image-web-3-mobile.jpg" alt="">
+        </div>
+
+        <div id="popular" class="main-info">
           <div class="title">
             <h1>The Bright Future of Web 3.0?</h1>
           </div>
@@ -53,7 +67,7 @@
         </div>
       </div>
 
-      <div class="side-articles">
+      <div id="new" class="side-articles">
         <h2>New</h2>
 
         <div class="side-art">
@@ -73,7 +87,7 @@
       </div>
     </section>
 
-    <section class="trending-articles">
+    <section id="trending" class="trending-articles">
 
       <div class="trends">
         <div class="thumbnail">
@@ -111,10 +125,12 @@
     </section>
 
   </section>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/TravisH-bot">Travis H</a>.
+    </p>
+  </footer>
 
   <script src="./index.js"></script>
 </body>
